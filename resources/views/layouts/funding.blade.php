@@ -701,10 +701,8 @@
 }
 
 .support-card img {
-  width: 100%; /* Changed to responsive width */
-  max-width: 550px;
-  height: auto; /* Changed to auto height */
-  min-height: 250px;
+  width: 550px; /* Fixed width for consistency */
+  height: 300px; /* Fixed height for consistency */
   object-fit: cover;
   border-radius: 10px;
   flex-shrink: 0;
@@ -1011,69 +1009,18 @@
         </div>
     </section>
 
-    <!-- Ways You Can Support UID -->
-    <section class="ways-support-section py-5" style="background-color: #ffffff; margin-top: -70px;">
-    <div class="container">
-
-        <!-- Impact Donations -->
-        <div class="support-card d-flex flex-column flex-md-row align-items-center p-4 rounded-4 mb-4">
-        <div class="support-image me-md-4 mb-3 mb-md-0">
-            <img src="{{ asset('assets/UIDBC.jpg') }}" alt="Impact Donations" class="img-fluid rounded-3">
+    <!-- Introduction Section -->
+    <section class="intro-section py-5" style="background-color: #ffffff;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-12">
+                    <p class="text-center mb-0" style="font-size: 1.15rem; line-height: 1.9; color: #333; font-weight: 400;">
+                        Since 2003, <strong style="color: #154a5b;">United In Diversity (UID)</strong> has been dedicated to accelerating systemic transformation in Indonesia toward sustainable, just, and inclusive development. We believe that solutions to complex challenges, such as inequality, climate issues, and governance, require ecosystem consciousness-based leadership and cross-sector collaboration.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="support-text">
-            <h5 class="fw-bold mb-2 text-white">Impact Donations</h5>
-            <div class="underline"></div>
-            <p class="mt-3 mb-0 text-white">
-            An Impact Donation is a transformational gift that supports United In Diversity’s mission
-            while giving donors lasting recognition, exclusive benefits, and the opportunity to shape the Foundation’s future.
-            </p>
-        </div>
-        </div>
-
-        <!-- Fund UID Programs -->
-        <div class="support-card d-flex flex-column flex-md-row align-items-center p-4 rounded-4 mb-4">
-        <div class="support-image me-md-4 mb-3 mb-md-0">
-            <img src="{{ asset('assets/fund.jpeg') }}" alt="Fund UID Programs" class="img-fluid rounded-3">
-        </div>
-        <div class="support-text">
-            <h5 class="fw-bold mb-2 text-white">Fund UID Programs</h5>
-            <div class="underline"></div>
-            <p class="mt-3 mb-0 text-white">
-            UID Programs span from sustainable leadership and capacity building initiatives, such as IDEAS, BEKAL, Co-Class, Sparks, and more.
-            </p>
-        </div>
-        </div>
-
-        <!-- Curate and Co-create -->
-        <div class="support-card d-flex flex-column flex-md-row align-items-center p-4 rounded-4 mb-4">
-        <div class="support-image me-md-4 mb-3 mb-md-0">
-            <img src="{{ asset('assets/curate.jpeg') }}" alt="Curate and Co-create" class="img-fluid rounded-3">
-        </div>
-        <div class="support-text">
-            <h5 class="fw-bold mb-2 text-white">Curate and co create your program with UID</h5>
-            <div class="underline"></div>
-            <p class="mt-3 mb-0 text-white">
-            Do you have your existing program? UID provides long-term consultation to curate and co-create your program for greater impact.
-            </p>
-        </div>
-        </div>
-
-        <!-- Endowment -->
-        <div class="support-card d-flex flex-column flex-md-row align-items-center p-4 rounded-4 mb-4">
-        <div class="support-image me-md-4 mb-3 mb-md-0">
-            <img src="{{ asset('assets/endow.jpg') }}" alt="Curate and Co-create" class="img-fluid rounded-3">
-        </div>
-        <div class="support-text">
-            <h5 class="fw-bold mb-2 text-white">Endowment</h5>
-            <div class="underline"></div>
-            <p class="mt-3 mb-0 text-white">
-            Endowments ensure that your contribution continues to generate impact year after year. With only a portion of the investment returns used annually, your gift lives on in perpetuity-supporting scholarships, research, and initiatives that transform Southeast Asia and beyond.
-            </p>
-        </div>
-        </div>
-    </div>
     </section>
-
 
     <!-- Programs Section -->
     <section class="flagship-section">
@@ -1145,7 +1092,7 @@
       </div>
 
       <div class="program-card" onclick="window.location.href='https://www.unitedindiversity.org/programs/learning-leadership-development-program-for-protected-area-manager-l2dp-pam'">
-        <img src="assets/lldp.jpg" alt="Learning Leadership Development Program for Protected Area Managers">)">
+        <img src="assets/lldp.jpg" alt="Learning Leadership Development Program for Protected Area Managers")">
         <div class="program-title">Learning Leadership Development Program for Protected Area Managers</div>
       </div>
     </div>
@@ -1153,6 +1100,69 @@
     <button class="arrow right">&#10095;</button>
   </div>
 </section>
+
+    <!-- Ways You Can Support UID -->
+    <section class="ways-support-section py-5" style="background-color: #ffffff;">
+    <div class="container">
+
+        <!-- Impact Donations -->
+        <div class="support-card d-flex flex-column flex-md-row align-items-center p-4 rounded-4 mb-4">
+        <div class="support-image me-md-4 mb-3 mb-md-0">
+            <img src="{{ asset('assets/UIDBC.jpg') }}" alt="Impact Donations" class="img-fluid rounded-3">
+        </div>
+        <div class="support-text">
+            <h5 class="fw-bold mb-2 text-white">Impact Donations</h5>
+            <div class="underline"></div>
+            <p class="mt-3 mb-0 text-white">
+            An Impact Donation is a transformational gift that supports United In Diversity’s mission
+            while giving donors lasting recognition, exclusive benefits, and the opportunity to shape the Foundation’s future.
+            </p>
+        </div>
+        </div>
+
+        <!-- Fund UID Programs -->
+        <div class="support-card d-flex flex-column flex-md-row align-items-center p-4 rounded-4 mb-4">
+        <div class="support-image me-md-4 mb-3 mb-md-0">
+            <img src="{{ asset('assets/fund.jpeg') }}" alt="Fund UID Programs" class="img-fluid rounded-3">
+        </div>
+        <div class="support-text">
+            <h5 class="fw-bold mb-2 text-white">Fund UID Programs</h5>
+            <div class="underline"></div>
+            <p class="mt-3 mb-0 text-white">
+            UID Programs span from sustainable leadership and capacity building initiatives, such as IDEAS, BEKAL, Co-Class, Sparks, and more.
+            </p>
+        </div>
+        </div>
+
+        <!-- Curate and Co-create -->
+        <div class="support-card d-flex flex-column flex-md-row align-items-center p-4 rounded-4 mb-4">
+        <div class="support-image me-md-4 mb-3 mb-md-0">
+            <img src="{{ asset('assets/curate.jpeg') }}" alt="Curate and Co-create" class="img-fluid rounded-3">
+        </div>
+        <div class="support-text">
+            <h5 class="fw-bold mb-2 text-white">Curate and co create your program with UID</h5>
+            <div class="underline"></div>
+            <p class="mt-3 mb-0 text-white">
+            Do you have your existing program? UID provides long-term consultation to curate and co-create your program for greater impact.
+            </p>
+        </div>
+        </div>
+
+        <!-- Endowment -->
+        <div class="support-card d-flex flex-column flex-md-row align-items-center p-4 rounded-4 mb-4">
+        <div class="support-image me-md-4 mb-3 mb-md-0">
+            <img src="{{ asset('assets/endow.jpg') }}" alt="Curate and Co-create" class="img-fluid rounded-3">
+        </div>
+        <div class="support-text">
+            <h5 class="fw-bold mb-2 text-white">Endowment</h5>
+            <div class="underline"></div>
+            <p class="mt-3 mb-0 text-white">
+            Endowments ensure that your contribution continues to generate impact year after year. With only a portion of the investment returns used annually, your gift lives on in perpetuity-supporting scholarships, research, and initiatives that transform Southeast Asia and beyond.
+            </p>
+        </div>
+        </div>
+    </div>
+    </section>
 
 <section class="partners-section">
   <h2>Partners & Collaborations</h2>
