@@ -12,6 +12,10 @@ Route::get('/support-uid', function () {
     return view('layouts.support');
 });
 
+Route::get('/funding', function () {
+    return view('layouts.funding');
+});
+
 Route::get('/about', function () {
     return view('layouts.about');
 });

@@ -16,7 +16,7 @@
     .section-title .underline {
         width: 60px;
         height: 3px;
-        background-color: #a3318f;
+        background-color: #15435a;
         margin-top: 10px;
         margin-left: auto;
         margin-right: auto;
@@ -25,7 +25,7 @@
     .underline1 {
         width: 80px;
         height: 3px;
-        background-color: #a3318f;
+        background-color: #15435a;
         margin-top: 10px;
         margin-left: auto;
         margin-right: auto;
@@ -281,7 +281,7 @@
         height: 50px;
         background-color: #6c757d;
         color: white;
-    }
+    }   
 
     .btn:active {
         background-color: #6c757d !important;
@@ -478,8 +478,6 @@
         margin: 0 auto 20px;
     }
 
-
-
     .donation-container {
         display: flex;
         justify-content: center;
@@ -503,8 +501,12 @@
         width: 100%;
         padding: 10px;
         margin: 10px 0;
-        border: 2px solid #a3318f;
+        border: 2px solid #15435a;
         border-radius: 5px;
+        box-sizing: border-box;
+        resize: none;
+        white-space: normal;   
+        overflow-wrap: break-word;
     }
 
     .amount-group {
@@ -515,23 +517,23 @@
 
     .input-group-text {
         margin-top: 10px;
-        height: 47.7px;
+        height: 47px;
         padding: 10px !important;
         background-color: #eee !important;
-        border: 2px solid #a3318f !important;
+        border: 2px solid #15435a !important;
         border-radius: 5px 0 0 5px !important;
     }
 
     .amount-group input {
         flex: 1;
         padding: 10px;
-        border: 2px solid #a3318f;
+        border: 2px solid #15435a;
         border-left: none;
         border-radius: 0 5px 5px 0;
     }
 
     .donate-btn {
-        background-color: #a3318f;
+        background-color: #15435a;
         margin-top: 20px;
         width: 100%;
         color: white;
@@ -544,7 +546,7 @@
     }
 
     .donate-btn:hover {
-        background-color: #7a1f72;
+        background-color:rgb(1, 41, 100);
     }
 
     /* Pastikan ini ditaruh setelah Bootstrap atau di file CSS terpisah */
@@ -561,196 +563,761 @@
     .table-fix tbody tr:nth-child(even) {
         background-color: #f8f9fa;
     }
+
+    .fade-wrapper {
+    position: relative;
+    max-height: 3.2em; /* ~2 lines */
+    overflow: hidden;
+    }
+
+    .fade-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #ffffff;
+    }
+
+    .fade-overlay {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1.5em;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(21, 67, 90, 0), #15435a 95%);
+    pointer-events: none;
+    }
+
+    /* Read More below faded text */
+    .read-more-btn {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-decoration: underline;
+    transition: opacity 0.2s;   
+    }
+
+    .read-more-btn:hover {
+    opacity: 0.8;
+    }
+
+    @media (max-width: 992px) {
+  .president-section .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .president-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 300px;
+  }
+
+  .president-section .col-md-8 {
+    padding: 1.5rem !important;
+  }
+
+  .president-section p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .president-section img {
+    max-height: 220px;
+  }
+
+  .president-section p {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .president-section h5 {
+    font-size: 1rem !important;
+  }
+
+  .president-section p.text-light {
+    font-size: 0.85rem !important;
+  }
+}
+
+@media (max-width: 992px) {
+    .president-section .card {
+      height: auto !important;
+    }
+
+    .president-section .row {
+      flex-direction: column;
+      text-align: center;
+      height: auto !important;
+    }
+
+    .president-section .col-md-4,
+    .president-section .col-md-8 {
+      height: auto !important;
+    }
+
+    .president-section img {
+      height: auto !important;
+      max-height: 280px;
+      object-fit: contain !important;
+    }
+
+    .president-section p.fst-italic {
+      max-height: none !important;
+      overflow: visible !important;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .president-section img {
+      max-height: 200px !important;
+    }
+
+    .president-section p.fst-italic {
+      font-size: 0.9rem !important;
+      line-height: 1.5 !important;
+    }
+
+    .president-section h5 {
+      font-size: 1rem !important;
+    }
+
+    .president-section p.text-light {
+      font-size: 0.85rem !important;
+    }
+  }
+
+  .support-card {
+    background-color: #1c4d64;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 1300px;
+  }
+
+  .support-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: #1c4d64;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  width: 100%;
+  max-width: 1300px;
+  margin: 2rem auto; /* adds breathing space, avoids cropping */
+  padding: 2rem;
+}
+
+.support-card img {
+  width: 550px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.support-text {
+  flex: 1;
+}
+
+.support-text h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.support-text .underline {
+  width: 30%;
+  height: 1.5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1rem;
+}
+
+.support-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+  margin: 0;
+}
+
+.ways-support-section {
+  background-color: #fff;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .support-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .support-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .support-text {
+    margin-top: 1rem;
+  }
+
+  .support-text .underline {
+    width: 60%;
+    margin: 0.5rem auto 1rem;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 600px) {
+  .ways-support-section {
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .support-card {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .support-text h5 {
+    font-size: 1.1rem;
+  }
+
+  .support-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .support-card img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.flagship-section {
+  background-color: #154a5b;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.flagship-section h2 {
+  color:rgb(254, 254, 254);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flagship-carousel {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 80px;
+}
+
+.flagship-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.program-card {
+  position: relative;
+  flex: 0 0 250px;
+  height: 350px;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.program-card:hover {
+  transform: scale(1.03);
+}
+
+.program-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.program-title {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: left;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  color: #1c3442;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: 30px;
+}
+
+.arrow.right {
+  right: 30px;
+}
+
+.arrow:hover {
+  background-color: #f0f0f0;
+}
+
+/* ✅ Responsive Fixes */
+@media (max-width: 992px) {
+  .flagship-carousel {
+    gap: 1rem;
+  }
+  .program-card {
+    flex: 0 0 200px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .flagship-section {
+    padding: 2rem 1rem;
+  }
+  .program-card {
+    flex: 0 0 180px;
+    height: 260px;
+  }
+  .program-title {
+    font-size: 1.1rem;
+  }
+  .arrow {
+    display: none;
+  }
+}
+
+.partners-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.partners-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #153a4d;
+  margin-bottom: 0.5rem;
+}
+
+.partners-section p {
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.5;
+}
+
+/* Carousel container */
+.logo-carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Scrolling track */
+.logo-track {
+  display: flex;
+  gap: 4rem;
+  width: max-content;
+  animation: scrollLoop 40s linear infinite;
+}
+
+/* Pause animation when hovering anywhere on carousel */
+.logo-carousel:hover .logo-track {
+  animation-play-state: paused;
+}
+
+/* Logos */
+.logo-carousel img {
+  height: 90px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-carousel img:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* Smooth infinite scroll */
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .logo-carousel img {
+    height: 60px;
+  }
+
+  .logo-track {
+    gap: 2rem;
+    animation-duration: 25s;
+  }
+}
 </style>
 
 @section('content')
     <section id="features" class="features section"
-        style="background: linear-gradient(rgba(91, 91, 91, 0), rgba(0, 0, 0, 0)), url('../machine/image/gate.png') no-repeat center center/cover; padding: 80px 20px; margin-top: 70px; height: 500px;">
+        style="background: linear-gradient(rgba(91, 91, 91, 0), rgba(0, 0, 0, 0)), url('{{ asset('assets/UIDBC.jpg') }}') no-repeat center center/cover; padding: 80px 20px; margin-top: 10px; height: 500px;">
         <div class="container">
             <div class="row">
                 <div data-aos="fade-up" data-aos-delay="200" class="col-lg-12 col-md-12 text-white"
                     style="align-content: center; text-align: center; margin-top: 120px;">
                     <h1 class="display-4"
-                        style="font-size: 50px; color: #ffffff; font-family: 'Source Serif Pro', serif; text-shadow: 2px 2px 4px #000000;">
-                        <b>Alumni and Friends Giving</b>
-                    </h1>
-                    <h1 class="display-4"
-                        style="font-size: 20px; color: #ffffff; font-family: 'Source Serif Pro', serif; text-shadow: 2px 2px 4px #000000;">
-                        <b>Home > Alumni and Friends Giving</b>
+                        style="font-size: 50px; color: #ffffff; font-family: 'Montserrat', montserrat; text-shadow: 2px 2px 4px #000000;">
+                        <b>Donate to United In Diversity</b>
                     </h1>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Donation Section -->
-    <section class="donation-section" style="margin-top: -10px;">
-        <h4 class="fw-bold" style="text-align: center; font-size: 25px;">Join Us and Enjoy Exclusive Membership Benefits!
-        </h4>
-        <div class="underline1"></div>
-        <div class="mx-auto text-center mt-3" style="max-width: 1200px;">
-            <p style="font-size: 20px;">
-                Alumni of all Tsinghua University and Tsinghua Southeast Asia degree and non-degree programs now have the
-                opportunity to join the Tsinghua SEA Center membership program and gain benefits including exclusive
-                networking and VIP events.
-                <br><b>Not a Tsinghua Alum?</b> No problem. Friends of the center are also invited to join hands with us and
-                receive the same membership benefits while generously supporting our mission.
-            </p>
-        </div>
-
-        <div class="container">
-            <div class="container my-5">
-                <div class="row">
-                    <!-- Life Section (Kiri) -->
-                    <div class="col-md-6 mb-4 box-main">
-                        <div class="popular"></div>
-                        <div class="section-title text-center">
-                            <div class="donation-title" style="margin-top: 10px">Lifetime</div>
-                            <div class="underline"></div>
-                        </div>
-                        <div class="row mt-3">
-                            <!-- Life Alumni -->
-                            <div class="col-md-6 col-6">
-                                <div class="alumni-box">
-                                    <div class="price"><b>$750</b></div>
-                                    <div class="label">ALUMNI</div>
-                                </div>
-                                <form action="" method="GET">
-                                    <div class="col-md-12 col-12 mt-3">
-                                        <textarea class="form-control custom-amount" name="cohort" style="height: 80px; resize: none;"
-                                            placeholder="Please type your cohort i.e HDX 2020 or Tsinghua EMBA 2012" required></textarea>
-                                    </div>
-                                    <button class="btn btn-join w-100 mt-4">JOIN</button>
-                                    <!-- <a href="https://checkout-staging.xendit.co/od/lifetime-alumni"><button class="btn btn-join w-100 mt-4">JOIN</button></a> -->
-                                </form>
-                            </div>
-                            <!-- Life Friends -->
-                            <div class="col-md-6 col-6">
-                                <div class="alumni-box">
-                                    <div class="price"><b>$1000</b></div>
-                                    <div class="label">FRIENDS</div>
-                                </div>
-                                <div class="container" style="height: 96px;"></div>
-                                <a href="../Alumni-and-Friends-Giving/lifetime-friends/"><button
-                                        class="btn btn-join w-100 mt-4">JOIN</button></a>
-                                <!-- <a href="https://checkout-staging.xendit.co/od/lifetime-friends"><button class="btn btn-join w-100 mt-4">JOIN</button></a> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Annual Section (Kanan) -->
-                    <div class="col-md-6">
-                        <div class="section-title text-center">
-                            <div class="most-popular" style="background-color: white; margin-top: 5px;">.</div>
-                            <div class="donation-title">Annual</div>
-                            <div class="underline ms-auto"></div>
-                        </div>
-                        <div class="row mt-3">
-                            <!-- Annual Alumni -->
-                            <div class="col-md-6 col-6">
-                                <div class="alumni-box">
-                                    <div class="price"><b>$100</b></div>
-                                    <div class="label">ALUMNI</div>
-                                </div>
-                                <form action="" method="GET">
-                                    <div class="col-md-12 col-12 mt-3">
-                                        <textarea class="form-control custom-amount" name="cohort" style="height: 80px; resize: none;"
-                                            placeholder="Please type your cohort i.e HDX 2020 or Tsinghua EMBA 2012" required></textarea>
-                                    </div>
-                                    <button class="btn btn-join w-100 mt-4">JOIN</button>
-                                    <!-- <a href="https://checkout-staging.xendit.co/od/annual-alumni"><button class="btn btn-join w-100 mt-4">JOIN</button></a> -->
-                                </form>
-                            </div>
-                            <!-- Annual Friends -->
-                            <div class="col-md-6 col-6">
-                                <div class="alumni-box">
-                                    <div class="price"><b>$75</b></div>
-                                    <div class="label">FRIENDS</div>
-                                </div>
-                                <div class="container" style="height: 96px;"></div>
-                                <a href="../Alumni-and-Friends-Giving/annual-friends/"><button
-                                        class="btn btn-join w-100 mt-4">JOIN</button></a>
-                                <!-- <a href="https://checkout-staging.xendit.co/od/annual-friends"><button class="btn btn-join w-100 mt-4">JOIN</button></a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <section id="donation-benefits" class="" style="margin-top: -50px;">
-        <div class="container">
-            <h2 class="section-title text-center">Benefits</h2>
-            <hr style="height: 1.5px; background-color: #000000 !important;">
-
-            <table class="table table-striped table-fix mt-4">
-                <tbody>
-                    <tr class="table-white">
-                        <td class="benefit-text" style="width: 750px; color: #231f54; font-size: 17px;">Priority Access to
-                            join the signature programs, events, and activities.</td>
-                        <td class="check-icon text-center" style="font-size: 30px;">✔️</td>
-                    </tr>
-                    <tr class="table-gray">
-                        <td class="benefit-text" style="width: 750px; color: #231f54; font-size: 17px;">Exclusive
-                            Networking with distinguished alumni, fellows, faculty, and industry leaders at members-only
-                            dinners and networking nights.</td>
-                        <td class="check-icon text-center" style="font-size: 30px;">✔️</td>
-                    </tr>
-                    <tr class="table-white">
-                        <td class="benefit-text" style="width: 750px; color: #231f54; font-size: 17px;">Collaboration
-                            Opportunities with new initiatives and programs with Tsinghua SEA.</td>
-                        <td class="check-icon text-center" style="font-size: 30px;">✔️</td>
-                    </tr>
-                    <tr class="table-gray">
-                        <td class="benefit-text" style="width: 750px; color: #231f54; font-size: 17px;">Access
-                            publications, research, and our alumni-fellow database.</td>
-                        <td class="check-icon text-center" style="font-size: 30px;">✔️</td>
-                    </tr>
-                    <tr class="table-white">
-                        <td class="benefit-text" style="width: 750px; color: #231f54; font-size: 17px;">Enjoy discounted
-                            online courses, 10% off venue rentals, exclusive offers from industry partners, and curated
-                            campus experiences.</td>
-                        <td class="check-icon text-center" style="font-size: 30px;">✔️</td>
-                    </tr>
-                    <tr class="table-gray">
-                        <td class="benefit-text" style="width: 750px; color: #231f54; font-size: 17px;">Post and discover
-                            job opportunities within the community.</td>
-                        <td class="check-icon text-center" style="font-size: 30px;">✔️</td>
-                    </tr>
-                    <tr class="table-white">
-                        <td class="benefit-text" style="width: 750px; color: #231f54; font-size: 17px;">Vote on
-                            initiatives that shape the future of the Center.</td>
-                        <td class="check-icon text-center" style="font-size: 30px;">✔️</td>
-                    </tr>
-                </tbody>
-            </table>
-
             <div class="donation-section text-center" style="margin-top: -10px;">
-                <h4 style="text-align: center; font-size: 25px;"><b>Extend your impact - Donate anytime, in any amount!</b>
+                <h4 style="text-align: center; font-size: 25px;"><b>Together, We Build the Future We Believe In</b>
                 </h4>
-                <p style="font-size: 20px;">Your contribution is more than a gift — it's an investment in shared knowledge,
-                    technology, and sustainable futures. By supporting Tsinghua SEA, you help amplify initiatives that
-                    create long-term change and empower communities.</p>
+                <p style="font-size: 20px; max-width: 1200px;">At United In Diversity, every contribution is more than a donation — 
+                    it’s a partnership in creating lasting impact. Your support fuels programs that unite leaders, communities, 
+                    and institutions to co-create solutions for sustainability, innovation, and inclusive growth. Together, 
+                    we’re not just funding projects — we’re nurturing a shared future where collaboration drives transformation and 
+                    knowledge becomes action.</p>
 
-                <div class="donation-container">
-                    <form action="" method="post"
-                        class="formm">
+                    <div class="donation-container" style="margin-top: 50px;">
+                    <form action="" method="post" class="formm">
                         <input type="text" name="name" id="name" class="donation-input"
                             placeholder="Enter your name" required>
                         <input type="email" name="email" id="email" class="donation-input"
                             placeholder="Enter your email" required>
                         <div class="input-group amount-group">
-                            <span class="input-group-text">Rp</span>
-                            <input type="number" name="amount_usd" id="amount" class="donation-input"
-                                placeholder="Enter a custom amount in Rupiah" required>
+                        <span class="input-group-text">Rp</span>
+                        <input type="number" name="amount_usd" id="amount" class="donation-input"
+                                placeholder="Enter a custom amount of Rupiah" required>
                         </div>
-                        <input type="hidden" name="type_donation" value="Donation_Custome" readonly id="type_donation"
-                            class="donation-input" placeholder="Enter your type" required>
+                        <textarea name="fellows" id="fellows" class="donation-input"
+                            placeholder="If you are UID fellows, Please type your program and cohort"></textarea>
+                        <input type="hidden" name="type_donation" value="Donation_Custome" readonly id="type_donation">
                         <button type="submit" class="donate-btn">DONATE</button>
                     </form>
-                </div>
+                    </div>
             </div>
         </div>
     </section>
+
+    <!-- Ways You Can Support UID -->
+    <section class="ways-support-section py-5" style="background-color: #ffffff; margin-top: -70px;">
+    <div class="container">
+
+        <!-- Impact Donations -->
+        <div class="support-card d-flex flex-column flex-md-row align-items-center p-4 rounded-4 mb-4">
+        <div class="support-image me-md-4 mb-3 mb-md-0">
+            <img src="{{ asset('assets/UIDBC.jpg') }}" alt="Impact Donations" class="img-fluid rounded-3">
+        </div>
+        <div class="support-text">
+            <h5 class="fw-bold mb-2 text-white">Impact Donations</h5>
+            <div class="underline"></div>
+            <p class="mt-3 mb-0 text-white">
+            An Impact Donation is a transformational gift that supports United In Diversity’s mission
+            while giving donors lasting recognition, exclusive benefits, and the opportunity to shape the Foundation’s future.
+            </p>
+        </div>
+        </div>
+
+        <!-- Fund UID Programs -->
+        <div class="support-card d-flex flex-column flex-md-row align-items-center p-4 rounded-4 mb-4">
+        <div class="support-image me-md-4 mb-3 mb-md-0">
+            <img src="{{ asset('assets/fund.jpeg') }}" alt="Fund UID Programs" class="img-fluid rounded-3">
+        </div>
+        <div class="support-text">
+            <h5 class="fw-bold mb-2 text-white">Fund UID Programs</h5>
+            <div class="underline"></div>
+            <p class="mt-3 mb-0 text-white">
+            UID Programs span from sustainable leadership and capacity building initiatives, such as IDEAS, BEKAL, Co-Class, Sparks, and more.
+            </p>
+        </div>
+        </div>
+
+        <!-- Curate and Co-create -->
+        <div class="support-card d-flex flex-column flex-md-row align-items-center p-4 rounded-4 mb-4">
+        <div class="support-image me-md-4 mb-3 mb-md-0">
+            <img src="{{ asset('assets/curate.jpeg') }}" alt="Curate and Co-create" class="img-fluid rounded-3">
+        </div>
+        <div class="support-text">
+            <h5 class="fw-bold mb-2 text-white">Curate and co create your program with UID</h5>
+            <div class="underline"></div>
+            <p class="mt-3 mb-0 text-white">
+            Do you have your existing program? UID provides long-term consultation to curate and co-create your program for greater impact.
+            </p>
+        </div>
+        </div>
+
+        <!-- Endowment -->
+        <div class="support-card d-flex flex-column flex-md-row align-items-center p-4 rounded-4 mb-4">
+        <div class="support-image me-md-4 mb-3 mb-md-0">
+            <img src="{{ asset('assets/endow.jpg') }}" alt="Curate and Co-create" class="img-fluid rounded-3">
+        </div>
+        <div class="support-text">
+            <h5 class="fw-bold mb-2 text-white">Endowment</h5>
+            <div class="underline"></div>
+            <p class="mt-3 mb-0 text-white">
+            Endowments ensure that your contribution continues to generate impact year after year. With only a portion of the investment returns used annually, your gift lives on in perpetuity-supporting scholarships, research, and initiatives that transform Southeast Asia and beyond.
+            </p>
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Programs Section -->
+    <section class="flagship-section">
+  <h2>Support Our Flagship Programs</h2>
+
+  <!-- Wrapper for arrows + carousel -->
+  <div class="carousel-wrapper">
+    <button class="arrow left">&#10094;</button>
+
+    <div class="flagship-carousel">
+        <div class="program-card" onclick="window.location.href='https://www.unitedindiversity.org/programs/ideas-asia-pacific'">
+          <img src="assets/IDEASAP.jpg" alt="IDEAS Asia Pacific">
+          <div class="program-title">IDEAS Asia Pacific</div>
+        </div>
+      
+      <div class="program-card" onclick="window.location.href='https://www.unitedindiversity.org/programs/bekal-pemimpin'">
+        <img src="assets/bekal.jpg" alt="BEKAL Pemimpin">
+        <div class="program-title">BEKAL Pemimpin</div>
+      </div>
+
+      <div class="program-card" onclick="window.location.href='https://www.unitedindiversity.org/programs/co-class'">
+        <img src="assets/coclass.jpg" alt="Co-class">
+        <div class="program-title">Co-class</div>
+      </div>
+
+      <div class="program-card" onclick="window.location.href='https://www.unitedindiversity.org/programs/lentera-indonesia'">
+        <img src="assets/lentera.jpg" alt="Lentera Indonesia">
+        <div class="program-title">Lentera Indonesia</div>
+      </div>
+
+      <div class="program-card" onclick="window.location.href='https://www.unitedindiversity.org/programs/youth-action-forum'">
+        <img src="assets/YAF.jpg" alt="Youth Action Forum">
+        <div class="program-title">Youth Action Forum</div>
+      </div>
+
+      <div class="program-card" onclick="window.location.href='https://www.unitedindiversity.org/programs/leans'">
+        <img src="assets/LEANS.jpg" alt="LEANS">
+        <div class="program-title">LEANS</div>
+      </div>
+
+      <div class="program-card" onclick="window.location.href='https://www.unitedindiversity.org/programs/public-speaking-bootcamp-spark'">
+        <img src="assets/psbc.jpg" alt="Public Speaking Bootcamp (SPARK)">
+        <div class="program-title">Public Speaking Bootcamp (SPARK)</div>
+      </div>
+
+      <div class="program-card" onclick="window.location.href='https://www.unitedindiversity.org/programs/happy-digital-x'">
+        <img src="assets/hdx.jpg" alt="Happy Digital X">
+        <div class="program-title">Happy Digital X</div>
+      </div>
+
+      <div class="program-card" onclick="window.location.href='https://www.unitedindiversity.org/programs/ideas-indonesia-1'">
+        <img src="assets/IDEASID.jpg" alt="IDEAS Indonesia">
+        <div class="program-title">IDEAS Indonesia</div>
+      </div>
+
+      <div class="program-card" onclick="window.location.href='https://www.unitedindiversity.org/programs/leads'">
+        <img src="assets/leads.jpg" alt="LEADS">
+        <div class="program-title">LEADS</div>
+      </div>
+
+      <div class="program-card" onclick="window.location.href='https://www.unitedindiversity.org/programs/heal'">
+        <img src="assets/heal.jpg" alt="HEAL">
+        <div class="program-title">HEAL</div>
+      </div>
+
+      <div class="program-card" onclick="window.location.href='https://www.unitedindiversity.org/programs/systems-leadership-capacity-building-slcb-for-folur'">
+        <img src="assets/slcb.jpg" alt="Systems Leadership Capacity Building (SLCB)">
+        <div class="program-title">Systems Leadership Capacity Building (SLCB)</div>
+      </div>
+
+      <div class="program-card" onclick="window.location.href='https://www.unitedindiversity.org/programs/learning-leadership-development-program-for-protected-area-manager-l2dp-pam'">
+        <img src="assets/lldp.jpg" alt="Learning Leadership Development Program for Protected Area Managers">)">
+        <div class="program-title">Learning Leadership Development Program for Protected Area Managers</div>
+      </div>
+    </div>
+
+    <button class="arrow right">&#10095;</button>
+  </div>
+</section>
+
+<section class="partners-section">
+  <h2>Partners & Collaborations</h2>
+  <p>
+    Together, We Forge Strong Partnerships to Build a Sustainable and Better Future for All
+  </p>
+
+  <div class="logo-carousel">
+    <div class="logo-track">
+      <!-- Original Set -->
+      <a href="https://lan.go.id" target="_blank"><img src="assets/lanri.jpg" alt="LAN RI" /></a>
+      <a href="https://www.tsinghua.edu.cn/en/" target="_blank"><img src="assets/tuniversity.jpg" alt="Tsinghua University" /></a>
+      <a href="#" target="_blank"><img src="assets/tsea.jpg" alt="Tsinghua University Southeast Asia" /></a>
+      <a href="https://sdgnetworksea.org/" target="_blank"><img src="assets/sdsn.png" alt="SDSN Southeast Asia" /></a>
+      <a href="#" target="_blank"><img src="assets/thk.png" alt="THK Reflection" /></a>
+      <a href="https://www.packard.org/" target="_blank"><img src="assets/packard.png" alt="Packard Foundation" /></a>
+      <a href="https://www.mit.edu/" target="_blank"><img src="assets/mit.png" alt="MIT" /></a>
+      <a href="https://rmi.org/" target="_blank"><img src="assets/rmi.png" alt="RMI" /></a>
+      <a href="#" target="_blank"><img src="assets/tie.png" alt="TIE" /></a>
+      <a href="https://www.unsdsn.org/" target="_blank"><img src="assets/sdsnun.png" alt="SDSN UN" /></a>
+      <a href="https://www.ui.ac.id/" target="_blank"><img src="assets/idk.png" alt="Universitas Indonesia" /></a>
+
+      <!-- Duplicated for seamless looping -->
+      <a href="https://lan.go.id" target="_blank"><img src="assets/lanri.jpg" alt="LAN RI" /></a>
+      <a href="https://www.tsinghua.edu.cn/en/" target="_blank"><img src="assets/tuniversity.jpg" alt="Tsinghua University" /></a>
+      <a href="#" target="_blank"><img src="assets/tsea.jpg" alt="Tsinghua University Southeast Asia" /></a>
+      <a href="https://sdgnetworksea.org/" target="_blank"><img src="assets/sdsn.png" alt="SDSN Southeast Asia" /></a>
+      <a href="#" target="_blank"><img src="assets/thk.png" alt="THK Reflection" /></a>
+      <a href="https://www.packard.org/" target="_blank"><img src="assets/packard.png" alt="Packard Foundation" /></a>
+      <a href="https://www.mit.edu/" target="_blank"><img src="assets/mit.png" alt="MIT" /></a>
+      <a href="https://rmi.org/" target="_blank"><img src="assets/rmi.png" alt="RMI" /></a>
+      <a href="#" target="_blank"><img src="assets/tie.png" alt="TIE" /></a>
+      <a href="https://www.unsdsn.org/" target="_blank"><img src="assets/sdsnun.png" alt="SDSN UN" /></a>
+      <a href="https://www.ui.ac.id/" target="_blank"><img src="assets/idk.png" alt="Universitas Indonesia" /></a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- President's Words Section -->
+<section class="president-section py-3 bg-white" style="margin-top: 20px;">
+  <div class="container">
+    <div class="card border-0 shadow rounded-4 mx-auto overflow-hidden"
+         style="max-width: 1300px; width: 100%; background-color: #15435a; height: 300px;">
+      <div class="row g-0 align-items-center h-100">
+        
+        <!-- Image -->
+        <div class="col-md-4 h-100 d-flex align-items-center justify-content-center"
+             style="background-color: #15435a;">
+          <img src="{{ asset('assets/Tantowi.jpeg') }}" alt="President"
+               class="img-fluid h-100 w-100 rounded-0"
+               style="object-fit: contain; object-position: left;">
+        </div>
+
+        <!-- Content -->
+        <div class="col-md-8 text-white d-flex flex-column justify-content-center p-4"
+             style="height: 100%; overflow: hidden;">
+          <p class="fst-italic mb-3"
+             style="font-size: 0.95rem; line-height: 1.5; max-height: 120px; overflow: hidden;">
+            “In a world facing growing challenges from the climate crisis and inequality to a loss of trust, 
+            United In Diversity (UID) believes lasting change begins with trust, collaboration, and shared awareness. 
+            For over twenty years, UID has brought together leaders from government, business, academia, and civil society 
+            to co-create solutions that bridge differences and inspire transformation. Your support is more than a donation. 
+            It is a commitment to a future where leadership is compassionate, communities thrive with nature, 
+            and diversity is our greatest strength.”
+          </p>
+
+          <h5 class="fw-bold mb-1 text-white">Amb Tantowi Yahya</h5>
+          <p class="mb-0 text-light opacity-75" style="font-size: 0.9rem;">
+            President, United In Diversity Foundation
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Inquiries Section -->
+    <section class="inquiry-section py-4 bg-white">
+    <div class="container text-center">
+        <a href="mailto:contact@unitedindiversity.org"
+        class="text-decoration-none"
+        style="color: inherit;">
+        <div class="mx-auto px-4 py-3 rounded-4 shadow-sm"
+            style="background-color: #15435a; color: white; max-width: 400px; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+            <p class="mb-0" style="font-size: 1rem; line-height: 1.4;">
+            For inquiries, please contact:<br>
+            <strong>contact@unitedindiversity.org</strong>
+            </p>
+        </div>
+        </a>
+    </div>
+    </section>
 @endsection
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const carousel = document.querySelector('.flagship-carousel');
+  const leftArrow = document.querySelector('.arrow.left');
+  const rightArrow = document.querySelector('.arrow.right');
+
+  if (!carousel || !leftArrow || !rightArrow) return;
+
+  function getScrollAmount() {
+    const card = carousel.querySelector('.program-card');
+    if (!card) return 300;
+    const gap = parseInt(getComputedStyle(carousel).gap) || 24;
+    return card.offsetWidth + gap;
+  }
+
+  leftArrow.addEventListener('click', () => {
+    carousel.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+  });
+
+  rightArrow.addEventListener('click', () => {
+    carousel.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+  });
+
+  function updateArrows() {
+    const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth - 1;
+    leftArrow.style.opacity = carousel.scrollLeft <= 2 ? '0.4' : '1';
+    rightArrow.style.opacity = carousel.scrollLeft >= maxScrollLeft ? '0.4' : '1';
+  }
+
+  carousel.addEventListener('scroll', updateArrows, { passive: true });
+  window.addEventListener('resize', () => setTimeout(updateArrows, 100));
+  setTimeout(updateArrows, 100);
+});
+</script>

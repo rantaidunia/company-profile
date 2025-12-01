@@ -1,144 +1,188 @@
 <style>
-    a.pdf h4 {
-        color: #00c0fe !important;
+    .custom-footer {
+    background: #0f3b52;
+    color: #fff;
+    font-size: 15px;
+}
+
+.footer-logo {
+    height: 55px;
+}
+
+/* Section Titles */
+.footer-title,
+.footer-about-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+/* Yellow underline */
+.footer-title::after,
+.footer-about-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 35px;
+    height: 3px;
+    background: #f4a51c; /* yellow underline */
+}
+
+/* Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f4a51c;
+}
+
+/* Contact & Address */
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+}
+
+.footer-address {
+    display: flex;
+    gap: 8px;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+/* Social icons */
+.footer-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    background: #fff;
+    color: #0f3b52;
+}
+
+/* Bottom bar */
+.footer-bottom {
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .custom-footer {
+        text-align: center;
     }
 
-    a.pdf:hover h4 {
-        color: #5dd7ff !important;
+    .footer-title::after,
+    .footer-about-title::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    a.pdf:active h4 {
-        color: #5dd7ff !important;
-    }
-
-    .footer-contact p {
-        display: flex;
-        /* Gunakan flexbox untuk mengatur ikon dan teks */
-        align-items: center;
-        /* Vertikal align */
-    }
-
-    .footer .social-links p a {
-        display: flex;
-        /* Agar lingkaran sesuai dengan ikon */
+    .footer-contact-item,
+    .footer-address {
         justify-content: center;
-        /* Pusatkan ikon di dalam lingkaran */
-        align-items: center;
-        /* Pusatkan secara vertikal di lingkaran */
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 1px solid #00c0fe;
-        /* Warna lingkaran */
-        font-size: 16px;
-        color: #00c0fe;
-        /* Warna ikon */
-        margin-right: 10px;
-        transition: 0.3s;
-        text-decoration: none;
-        /* Hilangkan underline pada link */
     }
-
-    .footer .social-links p a:hover {
-        color: var(--default-color);
-        /* Warna ikon saat hover */
-        border-color: var(--default-color);
-        /* Warna border saat hover */
-    }
-
-    .footer .social-links p span {
-        font-size: 16px;
-        /* Ukuran teks */
-        color: var(--default-color);
-        /* Warna teks */
-    }
+}
 </style>
 
-<footer id="footer" class="footer position-relative light-background">
-
-    <div class="container footer-top">
+<footer class="custom-footer">
+    <div class="container py-5">
         <div class="row gy-4">
-            <div class="col-lg-4 col-md-6 footer-about" style="text-align: justify;">
-                <h6 class="sitename" style="line-height: 1.7;">PT. Yakin Makmur Teknik a privately
-                    owned Indonesian company, We are fully
-                    established and experienced in design
-                    engineering and construction of steel,
-                    piping, electrical & instrument. The
-                    company is located in Jakarta with a
-                    combined expatriates and Indonesian
-                    team of highly motivated and experienced
-                    specialist, managers and engineers equipped with the
-                    latest computer software and technology
-                    to meet the highest International codes
-                    and standards.</h6>
-                <div class="footer-contact pt-3 social-links">
-                    <p class="mt-1">
-                        <a href=""><i class="bi bi-telephone-fill"></i></a>
-                        <span>0267 - 8407445</span>
-                    </p>
-                    <p>
-                        <a href=""><i class="bi bi-envelope"></i></a>
-                        <span>info@example.com</span>
-                    </p>
-                </div>
 
-                <div class="social-links d-flex mt-4">
-                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+            <!-- Logo + Contact + Addresses -->
+            <div class="col-lg-4 col-md-6">
+                <img src="assets/white.png" alt="Logo" class="footer-logo mb-3">
+
+                <p class="footer-contact-item">
+                    <i class="bi bi-telephone-fill"></i> +622613521928
+                </p>
+
+                <p class="footer-contact-item">
+                    <i class="bi bi-envelope-fill"></i> contact@unitedindiversity.org
+                </p>
+
+                <h5 class="footer-about-title mt-4">UID Learning Hub Jakarta</h5>
+                <p class="footer-address">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Jl. Hayam Wuruk No.28, RT.14/RW.1, Kb. Klp.,  
+                    Kecamatan Gambir, Kota Jakarta Pusat, DKI Jakarta 10120
+                </p>
+
+                <h5 class="footer-about-title mt-4">UID Bali Campus</h5>
+                <p class="footer-address">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Kura Kura Bali SEZ, Serangan,  
+                    Denpasar Selatan, Bali 80229, Indonesia
+                </p>
             </div>
 
-            <div class="col-lg-2 col-md-3 footer-links">
-                <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Services</a></li>
+            <!-- Privacy (moved here) -->
+            <div class="col-lg-2 col-md-4">
+                <h5 class="footer-title">Privacy</h5>
+                <ul class="footer-links">
+                    <li><a href="https://www.unitedindiversity.org/terms-of-use">Terms of Use</a></li>
+                    <li><a href="https://www.unitedindiversity.org/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="javascript:void(0)">Cookie Setting</a></li>
                 </ul>
             </div>
 
-            <div class="col-lg-2 col-md-3 footer-links">
-                <ul>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Clients</a></li>
-                    <li><a href="#">Experience</a></li>
+            <!-- Quick Links (moved here) -->
+            <div class="col-lg-2 col-md-4">
+                <h5 class="footer-title">Quick Links</h5>
+                <ul class="footer-links">
+                    <li><a href="https://www.unitedindiversity.org/about-us">About UID</a></li>
+                    <li><a href="https://www.unitedindiversity.org/programs">Programs</a></li>
+                    <li><a href="https://event.unitedindiversity.org/">Events</a></li>
+                    <li><a href="https://fellows.unitedindiversity.org/">UID Fellows</a></li>
+                    <li><a href="https://www.unitedindiversity.org/collaborate-with-UID">Collaborate</a></li>
                 </ul>
             </div>
 
-            <div class="col-lg-4 col-md-12 footer-newsletter">
-                <h4>Head Office</h4>
-                <p>Ruko Broadway Galuh Mas III / 11 Sukaharja Teluk Jambe Timur Karawang 41361 <br>Phone: 0267-8407445
-                </p>
-                <h4>Workshop</h4>
-                <p>Jl. Raya Kosambi Telaga Sari No.56 Karawang
-                    <br>Phone: 0267-8631172
-                </p>
-                <a href="{{ asset('assets/pdf/Company Profile PT. YMT.pdf') }}" class="pdf">
-                    <h4><i class="bi bi-download"></i> Download Company Profile</h4>
-                </a>
-                {{-- <form action="forms/newsletter.php" method="post" class="php-email-form">
-                    <div class="newsletter-form"><input type="email" name="email"><input type="submit"
-                            value="Subscribe"></div>
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-                </form> --}}
+            <!-- Social -->
+            <div class="col-lg-4 col-md-12">
+                <h5 class="footer-title">Follow Us</h5>
+
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/uidindonesia/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.instagram.com/uidindonesia/?hl=en" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://x.com/uidindonesia" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.facebook.com/uidindonesia" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.youtube.com/@uidindonesia" target="_blank"><i class="bi bi-youtube"></i></a>
+                </div>
             </div>
 
         </div>
     </div>
 
-    <div class="container copyright text-center mt-4">
-        <p>Copyright <span>© 2024</span> <strong class="px-1 sitename">PT Yakin Makmur Teknik</strong> <span>All Rights
-                Reserved</span></p>
-        <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you've purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-            <!-- Developer by <a href="#">RR Technology</a> -->
-        </div>
+    <div class="footer-bottom text-center py-3">
+        © 2024 United In Diversity. All Rights Reserved
     </div>
-
 </footer>
+
