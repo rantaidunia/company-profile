@@ -1010,13 +1010,16 @@
     </section>
 
     <!-- Introduction Section -->
-    <section class="intro-section py-5" style="background-color: #ffffff;">
+    <section class="intro-section py-5" style="background-color: #f8f9fa;">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-10 col-md-12">
-                    <p class="text-center mb-0" style="font-size: 1.15rem; line-height: 1.9; color: #333; font-weight: 400;">
-                        Since 2003, <strong style="color: #154a5b;">United In Diversity (UID)</strong> has been dedicated to accelerating systemic transformation in Indonesia toward sustainable, just, and inclusive development. We believe that solutions to complex challenges, such as inequality, climate issues, and governance, require ecosystem consciousness-based leadership and cross-sector collaboration.
-                    </p>
+                <div class="col-lg-10">
+                    <div class="p-5 bg-white rounded-4 shadow-sm text-center position-relative" style="border-top: 5px solid #154a5b;">
+                        <i class="bi bi-quote position-absolute text-muted opacity-25" style="top: 10px; left: 20px; font-size: 4rem;"></i>
+                        <p class="mb-0" style="font-size: 1.25rem; line-height: 1.8; color: #444; font-weight: 400;">
+                            Since 2003, <strong style="color: #154a5b;">United In Diversity (UID)</strong> has been dedicated to accelerating systemic transformation in Indonesia toward sustainable, just, and inclusive development. We believe that solutions to complex challenges, such as inequality, climate issues, and governance, require ecosystem consciousness-based leadership and cross-sector collaboration.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
